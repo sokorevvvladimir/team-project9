@@ -1,0 +1,71 @@
+.advantages__title {
+  visibility: hidden;
+}
+
+.advantages__item {
+  margin-left: 20px;
+
+  //   &:nth-child(1) {
+  // background-image: url('../images/adv1.png');
+
+  // @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  //   background-image: url('../images/adv1@2x.png');
+  // }
+  //   }
+
+  //   &:nth-child(2) {
+  // background-image: url('../images/adv2.png');
+
+  // @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  //   background-image: url('../images/adv2@2x.png');
+  // }
+  //   }
+
+  //   &:nth-child(3) {
+  // background-image: url('../images/adv3.png');
+
+  // @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  //   background-image: url('../images/adv3@2x.png');
+  // }
+  //   }
+}
+
+.advantages__text {
+  //   width: 230px;
+  //   height: 36px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  color: $black-color;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+}
+
+.advantages__numbers {
+  //   width: 98px;
+  height: 56px;
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $accent-color;
+
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 58px;
+    height: 65px;
+    text-align: right;
+  }
+}
