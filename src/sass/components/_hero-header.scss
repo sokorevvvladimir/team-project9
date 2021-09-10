@@ -77,12 +77,14 @@
   top: 86px;
   left: 97px;
   @include respond-to(tablet) {
+    display: block;
     top: 26px;
     left: 344px;
     width: 143px;
     height: 336px;
   }
   @include respond-to(desktop) {
+    display: block;
     top: 71px;
     left: 548px;
     width: 236px;
@@ -290,5 +292,57 @@
   @include respond-to(desktop) {
     font-size: 14px;
     line-height: 1.28;
+  }
+}
+
+.header__tasty {
+  margin: 0;
+  padding: 0;
+  display: none;
+  z-index: 35;
+  @include respond-to(tablet) {
+    display: block;
+    position: absolute;
+    top: 228px;
+    left: 532px;
+    width: 168px;
+    height: 133px;
+  }
+  @include respond-to(desktop) {
+    display: block;
+    position: absolute;
+    top: 395px;
+    left: 832px;
+    width: 293px;
+    height: 232px;
+  }
+}
+
+.header__text-about {
+  display: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 1.5;
+  color: $white-color;
+
+  @include respond-to(tablet) {
+    display: block;
+    width: 114px;
+    height: 48px;
+    top: 255px;
+    left: 120px;
+  }
+  @include respond-to(desktop) {
+    display: block;
+    width: 200px;
+    height: 78px;
+    top: 448px;
+    left: 249px;
+    font-size: 14px;
+    line-height: 1.4;
   }
 }
