@@ -1,10 +1,36 @@
-.customer-reviews {
-  &__box {
+@media screen and (max-width: 767px) {
+  .customer-reviews {
     margin-left: auto;
     margin-right: auto;
-  }
-  &__text {
-    width: 157px;
+    display: flex;
+    flex-direction: column;
+
     text-align: center;
+    align-items: center;
+
+    &__text {
+      margin-bottom: 30px;
+      margin-top: 29px;
+      max-width: 180px;
+    }
   }
+}
+.customer-reviews__text {
+  background-color: red;
+  position: relative;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 255%;
+  text-align: center;
+  color: #000000;
+}
+
+.customer-reviews__text::before {
+  content: '';
+  width: 54px;
+  height: 40px;
+  background-image: url('../images/icon-reviewspng.png');
+  position: absolute;
+  left: -20px;
+  bottom: 87%;
 }
