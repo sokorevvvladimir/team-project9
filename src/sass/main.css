@@ -27,8 +27,14 @@ html {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+
   /* 3 */
   tab-size: 4;
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+
   /* 3 */
 }
 
@@ -70,7 +76,10 @@ Text-level semantics
 Add the correct text decoration in Chrome, Edge, and Safari.
 */
 abbr[title] {
+
   text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /**
@@ -89,7 +98,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -174,6 +184,7 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
+
   -webkit-appearance: button;
 }
 
@@ -260,6 +271,17 @@ Add the correct display in Chrome and Safari.
 */
 summary {
   display: list-item;
+}
+
+@keyframes infiniteRotate {
+@-webkit-keyframes infiniteRotate {
+
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes infiniteRotate {
@@ -561,6 +583,377 @@ p {
     width: 1280px;
     padding-left: 15px;
     padding-right: 15px;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.31;
+  border-radius: 22px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.type-one:hover, .type-one:focus,
+.type-one-mobile:hover,
+.type-one-mobile:focus,
+.type-two-red:hover,
+.type-two-red:focus,
+.type-two-white:hover,
+.type-two-white:focus,
+.btn-read-more:hover,
+.btn-read-more:focus,
+.btn-contacts-red:hover,
+.btn-contacts-red:focus,
+.btn-contacts-white:hover,
+.btn-contacts-white:focus {
+  background-color: #ecebeb;
+}
+
+.type-one-mobile {
+  min-width: 209px;
+  padding: 15px 48px;
+}
+@media screen and (min-width: 786px) {
+  .type-one-mobile {
+    min-width: 186px;
+    padding: 15px 43px;
   }
 }
-/*# sourceMappingURL=main.css.map */
+
+.type-two-red,
+.type-two-white {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  border-radius: 20px;
+}
+@media screen and (min-width: 1280px) {
+  .type-two-red,
+.type-two-white {
+    font-size: 14px;
+    line-height: 1.28;
+  }
+}
+
+.type-two-red {
+  color: #ffffff;
+  background-color: #d41443;
+  padding: 9px 15px;
+  min-width: 62px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.type-two-red:hover, .type-two-red:focus {
+  background-color: #c7133e;
+}
+@media screen and (min-width: 1280px) {
+  .type-two-red {
+    min-width: 104px;
+    padding: 15px 24px;
+  }
+}
+
+.type-two-white {
+  color: #d41443;
+  background-color: #ffffff;
+  padding: 9px 15px;
+  min-width: 82px;
+}
+@media screen and (min-width: 1280px) {
+  .type-two-white {
+    min-width: 138px;
+    padding: 15px 21px;
+  }
+}
+
+.btn-read-more {
+  min-width: 176px;
+  padding: 15px 37px;
+}
+
+.btn-contacts-red {
+  color: #ffffff;
+  background-color: #d41443;
+  min-width: 161px;
+  padding: 15px 17px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-contacts-red:hover, .btn-contacts-red:focus {
+  background-color: #d41342;
+}
+@media screen and (min-width: 768px) {
+  .btn-contacts-red {
+    min-width: 191px;
+    padding: 15px 35px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .btn-contacts-red {
+    min-width: 198px;
+  }
+}
+
+.btn-contacts-white {
+  color: #d41443;
+  background-color: #ffffff;
+  padding: 16px 32px;
+  min-width: 161px;
+}
+@media screen and (min-width: 768px) {
+  .btn-contacts-white {
+    min-width: 174px;
+    padding: 15px 39px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .btn-contacts-white {
+    min-width: 180px;
+  }
+}
+
+.contacts-section {
+  background-image: linear-gradient(to bottom, #ffffff 5%, #ffffff 5%, #FFF5F6 5%, #FFF5F6 5%);
+}
+
+.contacts__item {
+  max-width: 220px;
+  background-color: #ffffff;
+  border-radius: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+}
+
+.contacts-title {
+  visibility: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.contacts-box {
+  padding: 43px 21px 43px 20px;
+}
+
+.contacts-box__title {
+  font-family: "DM Sans", sans-serif;
+  text-align: center;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #f0d1a5;
+  border-radius: 4px;
+  width: 80px;
+  height: 16px;
+  margin-bottom: 25px;
+}
+
+.contacts-header__city {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+
+.contacts-city {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+
+.contacts__text {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #907e82;
+  margin-bottom: 25px;
+}
+
+.contacts-timetable {
+  padding: 25px 0;
+  border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid #e1e1e1;
+  margin-bottom: 25px;
+}
+
+.contacts-header__text {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #ffa5ba;
+}
+
+.contacts__link {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #907e82;
+}
+
+.btn-contacts-red {
+  width: 162px;
+  display: block;
+}
+
+.footer {
+  background-color: #fff5f6;
+  padding-top: 110px;
+  padding-bottom: 40px;
+}
+
+.information {
+  max-width: 234px;
+  margin-bottom: 45px;
+}
+.information__about {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+  color: #ffa5ba;
+}
+.information__span {
+  font-family: Titan One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 39px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d41443;
+}
+
+.join {
+  margin-bottom: 45px;
+  text-align: right;
+}
+
+.social {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 45px;
+}
+.social__item {
+  margin-right: 28px;
+}
+.social__item:last-child {
+  margin-right: 0px;
+}
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: #e17992;
+}
+.social__icon {
+  fill: #ffffff;
+}
+.social__link:hover, .social__link:focus {
+  background-color: #c7133e;
+}
+
+.contact__phone {
+  color: #c7133e;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.86;
+}
+
+.contact__description {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.86;
+  color: #000000;
+}
+
+.protection {
+  border-top: 1px solid #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.protection__span {
+  margin-top: 22px;
+  color: #907e82;
+  max-width: 150px;
+}
+@media screen and (min-width: 768px) {
+  .protection__span {
+    max-width: 100%;
+  }
+}
+
+body {
+  font-family: "$primary-font", sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 480px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}/*# sourceMappingURL=main.css.map */

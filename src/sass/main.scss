@@ -5,6 +5,7 @@
 
 // Base
 @import 'base/normalize';
+@import 'base/fonts';
 
 // variables and mixin
 @import 'utils/breakpoints';
@@ -61,7 +62,10 @@ p {
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
-  max-width: 480px;
+
+  @media screen and (max-width: 767px) {
+    max-width: 480px;
+  }
 
   @media screen and (min-width: 768px) {
     width: 768px;
