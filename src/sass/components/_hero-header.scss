@@ -23,7 +23,6 @@
   width: 100%;
   height: 496px;
   border: 1px solid tomato;
-
   position: relative;
   @include respond-to(tablet) {
     max-width: none;
@@ -42,15 +41,25 @@
   z-index: 50;
   width: 100%;
   height: 50px;
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid blue;
 }
 
-// .header__logo {
-//   display: inline-flex;
-// }
+.header__wrap-topline--tablet {
+  width: 20px;
+  position: absolute;
+  right: 0;
+  @include respond-to(tablet) {
+    width: 210px;
+    right: 0;
+  }
+  @include respond-to(desktop) {
+    width: 160px;
+    right: 69px;
+  }
+}
 
 .header__menu-svg {
   display: inline-flex;
@@ -107,14 +116,24 @@
   }
 }
 
-.header__title {
-  display: block;
-  margin: 0;
-  padding: 0;
+.header__wrap-title {
   position: absolute;
   top: 187px;
   left: 0;
   z-index: 30;
+  @include respond-to(tablet) {
+    top: 65px;
+  }
+  @include respond-to(desktop) {
+    top: 134px;
+    left: 69px;
+  }
+}
+
+.header__title {
+  display: block;
+  margin: 0;
+  padding: 0;
   font-family: $secondary-font;
   font-weight: normal;
   font-size: 26px;
@@ -122,16 +141,16 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $white-color;
+  margin-bottom: 19px;
   @include respond-to(tablet) {
     font-size: 22px;
     letter-spacing: 1.14;
-    top: 65px;
+    margin-bottom: 20px;
   }
   @include respond-to(desktop) {
     font-size: 38px;
     letter-spacing: 1.16;
-    top: 134px;
-    left: 69px;
+    margin-bottom: 25px;
   }
 }
 
@@ -155,6 +174,9 @@
 .type-one--header {
   display: none;
   @include respond-to(tablet) {
+    display: block;
+  }
+  @include respond-to(desktop) {
     display: block;
   }
 }
