@@ -21,8 +21,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // position: relative;
-  overflow: hidden;
+  position: relative;
+  // overflow: hidden;
+
   @include respond-to(tablet) {
     max-width: none;
     width: 700px;
@@ -36,6 +37,8 @@
 }
 
 .header__svg {
+  display: block;
+
   @include respond-to(desktop) {
     display: none;
   }
@@ -43,16 +46,33 @@
 
 .header_ellipse {
   position: absolute;
-  top: 83px;
-  left: 36px;
+  top: 77px;
+  left: 16px;
   width: 345px;
   height: 345px;
   border-radius: 50%;
   background-color: $title-color;
   z-index: 10;
+
+  @include respond-to(tablet) {
+    top: -6px;
+    left: 273px;
+    width: 323px;
+    height: 323px;
+  }
+
+  @include respond-to(desktop) {
+    top: 15px;
+    left: 429px;
+    width: 538px;
+    height: 538px;
+  }
 }
 
 .header__ice-cream {
+  border: 1px solid tomato;
   position: absolute;
+  top: 92px;
+  left: 117px;
   z-index: 20;
 }
