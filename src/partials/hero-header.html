@@ -1,4 +1,81 @@
-<button type="button" class="type-one">Buy now ></button>
-
-<button type="button" class="type-two-red">Products</button>
-<button type="button" class="type-two-white">How it's made?</button>
+<header class="header">
+  <div class="header__wrap">
+    <div class="header__wrap-topline">
+      <img class="header__logo" src="././images/logo.png" alt="Logo IceCream" />
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-box">
+            <a href="#" class="header__nav-link header__nav-link--current">Home</a>
+          </li>
+          <li class="header__nav-box"><a href="#" class="header__nav-link">About us</a></li>
+          <li class="header__nav-box"><a href="#" class="header__nav-link">How it’s made?</a></li>
+          <li class="header__nav-box"><a href="#" class="header__nav-link">Our products</a></li>
+          <li class="header__nav-box"><a href="#" class="header__nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__wrap-topline header__wrap-topline--tablet">
+        <svg
+          class="header__menu-svg"
+          width="20"
+          height="14"
+          fill="$accent-color"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 1h20M0 7h20M0 13h20" stroke="#D41443" />
+        </svg>
+        <button type="button" class="type-one type-one--header">Buy now ></button>
+      </div>
+    </div>
+    <span class="header__ellipse"></span>
+    <picture class="header__ice-cream">
+      <source srcset="././images/header-ice-cream.png 1x, ././images/header-ice-cream@2x.png 2x" />
+      <img src="././images/header-ice-cream.png" alt="Colored IceCream" />
+    </picture>
+    <div class="header__wrap-title">
+      <h1 class="header__title">
+        <p>ice cream</p>
+        <p>made with</p>
+        <p class="header__title--accent">passion</p>
+      </h1>
+      <button
+        onclick="document.location='index.html'"
+        type="button"
+        class="type-two-red type-two-red--header"
+      >
+        Products
+      </button>
+      <button
+        onclick="document.location='index.html'"
+        type="button"
+        class="type-two-white type-two-white--header"
+      >
+        How it's made?
+      </button>
+    </div>
+    <picture class="header__milk">
+      <source srcset="././images/header-milk.png 1x, ././images/header-milk@2x.png 2x" />
+      <img src="././images/header-milk.png" alt="Jug of milk" />
+    </picture>
+    <picture class="header__tasty">
+      <source srcset="././images/header-tasty.png 1x, ././images/header-tasty@2x.png 2x" />
+      <img src="././images/header-tasty.png" alt="Girl with IceCream" />
+    </picture>
+    <div class="header__16-23 header__16-23--16">
+      <p class="header__16-23-number">16</p>
+      <p class="header__16-23-text">cafes</p>
+      <span class="header__16-23-ellipse"></span>
+    </div>
+    <div class="header__16-23 header__16-23--23">
+      <span class="header__16-23-ellipse"></span>
+      <p class="header__16-23-number">23</p>
+      <p class="header__16-23-text">food trucks</p>
+    </div>
+    <p class="header__text-about">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aspernatur adipisci dignissimos
+      sit
+    </p>
+    <button type="button" class="header__about-btn">
+      <img src="././images/header-arrow.png" class="header__about-img" alt="arrow right" />
+    </button>
+  </div>
+</header>
