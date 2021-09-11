@@ -1,3 +1,9 @@
+.container {
+  padding-bottom: 97px;
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 140px;
+  }
+}
 .advantages {
   background: #fff5f6;
 }
@@ -9,8 +15,10 @@
 
 .advantages-menu {
   display: flex;
-  flex-direction: column;
 
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
   @media screen and (min-width: 1280px) {
     justify-content: space-around;
   }
@@ -27,26 +35,26 @@
   }
 
   &:nth-child(1)::before {
-    background-image: url('../images/adv1.png');
+    background-image: url('../images/advantage1.png');
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('../images/adv1@2x.png');
+      background-image: url('../images/advantage1@2x.png');
     }
   }
 
   &:nth-child(2)::before {
-    background-image: url('../images/adv2.png');
+    background-image: url('../images/advantage2.png');
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('../images/adv2@2x.png');
+      background-image: url('../images/advantage2@2x.png');
     }
   }
 
   &:nth-child(3)::before {
-    background-image: url('../images/adv3.png');
+    background-image: url('../images/advantage3.png');
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('../images/adv3@2x.png');
+      background-image: url('../images/advantage3@2x.png');
     }
   }
 }
@@ -60,13 +68,16 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $accent-color;
+  margin-top: 16px;
 
   @media screen and(min-width: 768px) {
     font-size: 48px;
+    margin-top: 36px;
   }
 
   @media screen and(min-width: 1280px) {
     font-size: 58px;
+    margin-top: 40px;
   }
 }
 
