@@ -2,6 +2,17 @@
   <div class="header__wrap">
     <div class="header__wrap-topline">
       <img class="header__logo" src="././images/logo.png" alt="Logo IceCream" />
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-box">
+            <a href="#" class="header__nav-link header__nav-link--current">Home</a>
+          </li>
+          <li class="header__nav-box"><a href="#" class="header__nav-link">About us</a></li>
+          <li class="header__nav-box"><a href="#" class="header__nav-link">How it’s made?</a></li>
+          <li class="header__nav-box"><a href="#" class="header__nav-link">Our products</a></li>
+          <li class="header__nav-box"><a href="#" class="header__nav-link">Contact</a></li>
+        </ul>
+      </nav>
       <div class="header__wrap-topline header__wrap-topline--tablet">
         <svg
           class="header__menu-svg"
@@ -26,8 +37,20 @@
         <p>made with</p>
         <p class="header__title--accent">passion</p>
       </h1>
-      <button type="button" class="type-two-red type-two-red--header">Products</button>
-      <button type="button" class="type-two-white type-two-white--header">How it's made?</button>
+      <button
+        onclick="document.location='index.html'"
+        type="button"
+        class="type-two-red type-two-red--header"
+      >
+        Products
+      </button>
+      <button
+        onclick="document.location='index.html'"
+        type="button"
+        class="type-two-white type-two-white--header"
+      >
+        How it's made?
+      </button>
     </div>
     <picture class="header__milk">
       <source srcset="././images/header-milk.png 1x, ././images/header-milk@2x.png 2x" />
@@ -51,5 +74,8 @@
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aspernatur adipisci dignissimos
       sit
     </p>
+    <button type="button" class="header__about-btn">
+      <img src="././images/header-arrow.png" class="header__about-img" alt="arrow right" />
+    </button>
   </div>
 </header>
