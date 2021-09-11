@@ -49,10 +49,6 @@
 }
 .customer-reviews {
   &__text {
-    background: #fafafa;
-    z-index: -2;
-  }
-  &__text {
     position: relative;
     font-weight: 500;
     color: #000000;
@@ -132,4 +128,9 @@
 }
 .customer-reviews__item + .customer-reviews__item {
   margin-left: 18px;
+}
+.customer-reviews__box {
+  padding: 10px;
+  background: #fafafa;
+  z-index: -2;
 }
