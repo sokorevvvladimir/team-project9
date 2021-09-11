@@ -83,6 +83,8 @@
 
     border-radius: 50%;
     background-color: $menu-background;
+
+    transition: background-color 250ms linear;
   }
   &__icon {
     fill: $white-color;
@@ -138,6 +140,11 @@
     font-weight: bold;
     font-size: 14px;
     line-height: 1.52;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      padding-left: 6px;
+      padding-right: 7px;
+    }
     @media screen and (min-width: 768px) {
       max-width: 100%;
       font-size: 14px;
