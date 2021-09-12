@@ -1,0 +1,117 @@
+.about {
+  border: solid 2px tomato;
+  background-color: $about-background;
+
+  // .about__label
+
+  &__label {
+    padding-top: 125px;
+    font-family: $secondary-font;
+    font-size: 18px;
+    line-height: 1.17;
+
+    text-align: center;
+    text-transform: uppercase;
+    color: $title-color;
+
+    @media screen and(min-width: 768px) {
+      font-size: 26px;
+    }
+    @media screen and(min-width: 1280px) {
+      font-size: 30px;
+    }
+  }
+
+  // .about__title
+
+  &__title {
+    padding-top: 15px;
+    font-family: $secondary-font;
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+    text-transform: uppercase;
+    color: $accent-color;
+
+    @media screen and(min-width: 768px) {
+      font-size: 48px;
+    }
+    @media screen and(min-width: 1280px) {
+      font-size: 58px;
+    }
+  }
+
+  //.about__content
+
+  &__content {
+    @media screen and(min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+  }
+  // .about__cow
+
+  &__cow {
+    display: flex;
+    padding-top: 26px;
+    @media screen and(min-width: 768px) {
+      width: 340px;
+    }
+  }
+
+  //  .about__milk
+
+  &__milk {
+    display: none;
+    @media screen and(max-width: 767px) {
+      position: absolute;
+      display: flex;
+      object-fit: contain;
+      padding-top: 224px;
+    }
+    // position: absolute;
+    // display: flex;
+    // object-fit: contain;
+    // padding-top: 224px;
+
+  }
+  // .about__thumb
+
+  &__thumb {
+    font-family: $primary-font;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.6;
+    color: $primary-text-color;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    align-content: center;
+  }
+
+  // .about__text
+
+  &__text {
+    padding-top: 46px;
+    color: $black-color;
+    
+  }
+
+  // .about__description
+
+  &__description {
+    padding-top: 30px;
+    padding-bottom: 17px;
+    background-image: url(/images/about-milk@1x.png);
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-position: 100%;
+  }
+}
+
+.container {}
+
+.btn-read-more {
+  
+}
