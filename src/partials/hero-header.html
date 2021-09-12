@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" id="home">
   <div class="header__wrap">
     <!-- верхняя строка -->
     <div class="header__wrap-topline">
@@ -6,7 +6,7 @@
       <nav class="header__nav">
         <ul class="header__nav-list">
           <li class="header__nav-box">
-            <a href="#" class="header__nav-link header__nav-link--current">Home</a>
+            <a href="#home" class="header__nav-link header__nav-link--current">Home</a>
           </li>
           <li class="header__nav-box">
             <a href="#advantages" class="header__nav-link scrollto">About us</a>
@@ -15,7 +15,7 @@
             <a href="#how_its_made" class="header__nav-link scrollto">How it’s made?</a>
           </li>
           <li class="header__nav-box">
-            <a href="#product" class="header__nav-link scrollto">Our products</a>
+            <a href="#products" class="header__nav-link scrollto">Our products</a>
           </li>
           <li class="header__nav-box">
             <a href="#contacts" class="header__nav-link scrollto">Contact</a>
@@ -23,11 +23,11 @@
         </ul>
       </nav>
       <div class="header__wrap-topline header__wrap-topline--tablet">
-        <div>
+        <div class="clear">
           <!-- кнопка мобильного меню -->
           <button
             type="button"
-            class="header__menu-btn js-open-menu"
+            class="header__menu-btn js-open-menu clear"
             aria-expanded="false"
             aria-controls="mobile-menu"
           >
@@ -43,9 +43,11 @@
           </button>
           <!-- конец кнопки мобильного меню -->
         </div>
-        <button type="button" class="type-one type-one--header">Buy now ></button>
+        <!-- <button type="button" class="type-one type-one--header">Buy now ></button> -->
+        <button data-modal-open type="button" class="type-one type-one--header">Buy now</button>
       </div>
     </div>
+    <!-- <include src="./partials/mobile-menu.html"></include> -->
     <!-- конец верхней строки -->
     <!-- тайтл героя + две кнопки-ссылки -->
     <div class="header__wrap-title">
@@ -109,4 +111,42 @@
     </picture>
     <!-- конец картинки героя -->
   </div>
+
+  <!-- модалка -->
+  <div class="backdrop backdrop--is-hidden backdrop--layer" data-modal>
+    <div class="contacts-modal">
+      <button data-modal-close type="button" class="modal__btn-close">
+        <svg width="20" height="20">
+          <use href="./images/symbol-defs.svg#icon-close_40px"></use>
+        </svg>
+      </button>
+
+      <p class="contacts-madal__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, delectus distinctio. Et
+        optio similique officia doloremque totam quo officiis perferendis labore natus voluptas!
+        Nobis praesentium dolorem architecto, iste magni tenetur!
+      </p>
+
+      <form>
+        <div class="label">
+          <label for="contacts-name" class="contacts-label"></label>
+          <input
+            type="text"
+            name="name"
+            id="contacts-name"
+            class="contacts-input"
+            placeholder="Name"
+          />
+        </div>
+        <div>
+          <label for="tel" class="contacts-label"></label>
+
+          <input type="tel" name="tel" id="tel" class="contacts-input" placeholder="Phone" />
+        </div>
+      </form>
+
+      <button type="button" class="modal__btn-submit">Submit</button>
+    </div>
+  </div>
+  <!-- конец модалки -->
 </header>
