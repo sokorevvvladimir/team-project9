@@ -113,9 +113,23 @@
 
 .header__menu-svg {
   display: inline-flex;
+  transition: $animation-duration $cubic-bezier;
+  // @include respond-to(desktop) {
+  //   display: none;
+  // }
+}
+
+.header__menu-btn {
+  display: inline-flex;
+  border: none;
+  background-color: transparent;
   @include respond-to(desktop) {
     display: none;
   }
+}
+
+.header__menu-btn:hover .header__menu-svg {
+  transform: scale(1.3);
 }
 
 .header__ice-cream {

@@ -24,15 +24,24 @@
       </nav>
       <div class="header__wrap-topline header__wrap-topline--tablet">
         <div>
-          <svg
-            class="header__menu-svg"
-            width="20"
-            height="14"
-            fill="$accent-color"
-            xmlns="http://www.w3.org/2000/svg"
+          <!-- кнопка мобильного меню -->
+          <button
+            type="button"
+            class="header__menu-btn js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
           >
-            <path d="M0 1h20M0 7h20M0 13h20" stroke="#D41443" />
-          </svg>
+            <svg
+              class="header__menu-svg"
+              width="20"
+              height="14"
+              fill="$accent-color"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0 1h20M0 7h20M0 13h20" stroke="#D41443" />
+            </svg>
+          </button>
+          <!-- конец кнопки мобильного меню -->
         </div>
         <button type="button" class="type-one type-one--header">Buy now ></button>
       </div>
