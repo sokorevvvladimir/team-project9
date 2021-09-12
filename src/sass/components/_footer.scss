@@ -12,6 +12,8 @@
 .information {
   max-width: 234px;
   margin-bottom: 45px;
+  animation-name: animation-information;
+  animation-duration: 1500ms;
   @media screen and (min-width: 1280px) {
     max-width: 480px;
   }
@@ -57,9 +59,8 @@
 .join {
   margin-bottom: 45px;
   text-align: right;
-  // @media screen and (min-width: 768px) {
-  //   margin-right: auto;
-  // }
+  animation-name: animation-footer;
+  animation-duration: 1500ms;
 }
 .social {
   list-style: none;
@@ -83,8 +84,6 @@
 
     border-radius: 50%;
     background-color: $menu-background;
-
-    transition: background-color 250ms linear;
   }
   &__icon {
     fill: $white-color;
@@ -93,23 +92,20 @@
   &__link:focus {
     background-color: $button-products-hov-col;
     transition: background-color 250ms linear;
+    animation-name: circle;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
   }
 }
 
 .contact__phone {
   color: $button-products-hov-col;
-  // font-family: DM Sans;
-  // font-style: normal;
-  // font-weight: bold;
-  // font-size: 12px;
-  // line-height: 1.86;
-  // @media screen and (min-width: 768px) {
-  //   font-size: 14px;
-  // }
-  // @media screen and (min-width: 1280px) {
-  //   font-size: 16px;
-  //   letter-spacing: 0.02em;
-  // }
+  &:hover,
+  &:focus {
+    font-size: 17px;
+    transition: font-size 500ms linear;
+    animation-direction: 500ms;
+  }
 }
 .contact__description {
   font-family: DM Sans;
@@ -141,6 +137,10 @@
     font-weight: bold;
     font-size: 14px;
     line-height: 1.52;
+    animation-name: movement;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+
     @media screen and (max-width: 767px) {
       text-align: center;
       padding-left: 6px;
@@ -153,4 +153,44 @@
       letter-spacing: 0.02em;
     }
   }
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes movement {
+  0% {
+    transform: translatey(200px);
+  }
+  100% {
+    transform: translatey(0);
+  }
+}
+
+@keyframes animation-footer {
+  0% {
+    transform: translatex(400px);
+  }
+  100% {
+    transform: translatex(0);
+  }
+}
+
+@keyframes animation-information {
+  0% {
+    transform: translatex(-400px);
+  }
+  100% {
+    transform: translatex(0);
+  }
+}
+
+.flex-pozition {
+  padding-right: 4px;
 }
