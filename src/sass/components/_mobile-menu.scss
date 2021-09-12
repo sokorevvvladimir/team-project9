@@ -6,10 +6,7 @@
   top: 0;
   right: 0;
   z-index: 2000;
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
   transform: translateX(100%);
   transition: transform 250ms $cubic-bezier;
 
@@ -97,13 +94,10 @@
   }
 }
 
-<<<<<<< Updated upstream
 .nav-list__link--current {
   color: $accent-color;
-=======
 .mobile-menu.is-open {
   transform: translateX(0);
->>>>>>> Stashed changes
 }
 
 .mobile-menu.is-hidden {
