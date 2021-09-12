@@ -1,5 +1,9 @@
 .gallery {
   background-image: linear-gradient(to bottom, #fff5f6 33%, #fff 33%);
+  padding-bottom: 80px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 120px;
+  }
 }
 
 .masonry__img {
