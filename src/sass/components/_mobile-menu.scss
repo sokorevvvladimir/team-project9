@@ -5,7 +5,7 @@
   height: 100vh;
   top: 0;
   right: 0;
-  z-index: 2000;
+  z-index: 50;
   transform: translateX(100%);
   transition: transform 250ms $cubic-bezier;
 
@@ -100,4 +100,33 @@
 
 .mobile-menu.is-open {
   transform: translateX(0);
+}
+
+// ---------- ниже селекторы для модальной формы
+
+.backdrop--layer {
+  z-index: 55;
+}
+
+.modal__title {
+  text-align: center;
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1.13;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $accent-color;
+  margin: 0 0 10px 0;
+}
+
+.contacts__input--margin {
+  margin: 0 0 10px 0;
+}
+
+.backdrop.backdrop--is-hidden2 {
+  opacity: 0;
+  pointer-events: none;
 }
