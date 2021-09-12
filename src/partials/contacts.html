@@ -124,7 +124,7 @@
 
 </section>
 
-<div class="backdrop backdrop--is-hidden" data-modal>
+<div class="backdrop backdrop--is-hidden backdrop--layer" data-modal>
     <div class="contacts-modal">
 
         <button data-modal-close type="button" class="modal__btn-close">
@@ -139,21 +139,28 @@
         </p>
 
         <form>
-         <div class="label">
-        <label for="contacts-name" class="contacts-label"></label>
-            <input type="text" name="name" id="contacts-name" class="contacts-input" placeholder="Name">
-               
-        </div>
-        <div>
-            <label for="tel" class="contacts-label"></label>
+         <div class="contacts-form">
         
-             <input type="tel" name="tel" id="tel" class="contacts-input" placeholder="Phone">
+            <input type="text" name="name" id="contacts-name" class="contacts-input" placeholder=" ">
+
+            <label for="contacts-name" class="contacts-label">Name</label>
+        </div>
+        <div class="contacts-form">
+            
+             <input type="tel" name="tel" id="tel" class="contacts-input" placeholder=" ">
+
+            <label for="tel" class="contacts-label">Phone</label>
             </div>
         </form>
 
         <button type="button" class="modal__btn-submit">
             Submit
         </button>
+        <picture class="contacts__milk">
+                <source srcset="././images/header-milk.png 1x, ././images/header-milk@2x.png 2x" />
+                <img src="././images/header-milk.png" alt="Jug of milk" />
+            </picture>
     </div>
+    
 </div>
 
