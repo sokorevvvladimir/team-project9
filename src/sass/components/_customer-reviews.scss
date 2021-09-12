@@ -3,56 +3,14 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  @media screen and (max-width: 767px) {
-    &__text {
-      max-width: 180px;
-      font-size: 12px;
-      line-height: 255%;
-
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    &__text {
-      max-width: 544px;
-      font-size: 14px;
-      line-height: 216%;
-      letter-spacing: 0.04em;
-      padding-left: 40px;
-      padding-right: 36px;
-    }
-    .customer-reviews__title {
-      font-size: 16px;
-      margin-top: 42px;
-    }
-  }
-  @media screen and (min-width: 1280px) {
-    &__text {
-      max-width: 822px;
-      font-size: 16px;
-      line-height: 186%;
-      letter-spacing: 0.04em;
-      padding-left: 54px;
-      padding-right: 50px;
-    }
-    .customer-reviews__title {
-      font-size: 20px;
-      margin-top: 66px;
-      margin-top: 34px;
-    }
-  }
-}
-
-.customer-reviews {
   &__text {
     position: relative;
     font-weight: 500;
-    color: #000000;
+    color: $black-color;
     background-image: repeating-linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0) 0 28px,
-      #e1e1e1 0 29px
+      $line-color 0 29px
     );
   }
 
@@ -74,27 +32,91 @@
       top: -20px;
     }
   }
-}
-.customer-reviews__title {
-  position: relative;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 186%;
-  color: #000000;
-  margin-top: 52px;
-}
-.customer-reviews__title::before {
-  content: '';
-  width: 32px;
-  height: 4px;
-  background-image: url('../images/customer-points.svg');
-  position: absolute;
-  left: 43px;
-  top: -30px;
-
+  @media screen and (max-width: 767px) {
+    &__text {
+      max-width: 180px;
+      font-size: 12px;
+      line-height: 255%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    &__text {
+      max-width: 544px;
+      font-size: 14px;
+      line-height: 216%;
+      letter-spacing: 0.04em;
+      padding-left: 40px;
+      padding-right: 36px;
+    }
+  }
   @media screen and (min-width: 1280px) {
-    left: 60px;
-    top: -18px;
+    &__text {
+      max-width: 822px;
+      font-size: 16px;
+      line-height: 186%;
+      letter-spacing: 0.04em;
+      padding-left: 54px;
+      padding-right: 50px;
+    }
+  }
+}
+.customer-reviews {
+  &__title {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 186%;
+    color: $black-color;
+    margin-top: 52px;
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      font-size: 16px;
+      margin-top: 42px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 20px;
+      margin-top: 34px;
+    }
+  }
+  &__title::before {
+    content: '';
+    width: 32px;
+    height: 4px;
+    background-image: url('../images/customer-points.svg');
+    position: absolute;
+    left: 43px;
+    top: -30px;
+
+    @media screen and (min-width: 1280px) {
+      left: 60px;
+      top: -18px;
+    }
+  }
+}
+.customer-reviews {
+  &__list-icon {
+    display: flex;
+    margin-top: 30px;
+    @media screen and (min-width: 768px) {
+      margin-top: 35px;
+    }
+  }
+  &__item + &__item {
+    margin-left: 18px;
+  }
+  &__box {
+    padding: 20px;
+    background: #fafafa;
+
+    z-index: -2;
+    @media screen and (max-width: 767px) {
+      margin-top: 57px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-top: 48px;
+    }
   }
 }
 .slick-next {
@@ -116,26 +138,4 @@
 .slick-prev:before,
 .slick-next:before {
   color: $title-color;
-}
-.customer-reviews__list-icon {
-  display: flex;
-  margin-top: 30px;
-  @media screen and (min-width: 768px) {
-    margin-top: 35px;
-  }
-}
-.customer-reviews__item + .customer-reviews__item {
-  margin-left: 18px;
-}
-.customer-reviews__box {
-  padding: 20px;
-  background: #fafafa;
-
-  z-index: -2;
-  @media screen and (max-width: 767px) {
-    margin-top: 57px;
-  }
-  @media screen and (min-width: 768px) {
-    margin-top: 48px;
-  }
 }
