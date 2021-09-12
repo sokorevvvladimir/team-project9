@@ -99,6 +99,37 @@
   left: 43px;
   top: -18px;
   @media screen and (min-width: 1280px) {
-    display: none;
+    left: 60px;
+    top: -18px;
   }
+}
+.slick-next {
+  right: 93px;
+  z-index: 3;
+  color: $title-color;
+}
+.slick-prev {
+  left: 93px;
+  z-index: 3;
+  color: $title-color;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  color: $title-color;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: $title-color;
+}
+.customer-reviews__list-icon {
+  display: flex;
+  margin-top: 30px;
+  @media screen and (min-width: 768px) {
+    margin-top: 35px;
+  }
+}
+.customer-reviews__item + .customer-reviews__item {
+  margin-left: 18px;
 }
