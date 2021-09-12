@@ -26,7 +26,6 @@
 .products__title {
   font-family: $secondary-font;
   text-align: center;
-  margin-bottom: 15px;
   color: $accent-color;
   font-weight: 400;
   font-size: 34px;
@@ -87,7 +86,7 @@
   position: relative;
 }
 
-.pink::after {
+.pink::before {
   content: ' ';
   position: absolute;
   top: -23%;
@@ -98,11 +97,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-
-  @media screen and (max-width: 767px) {
-    left: 50%;
-    transform: translateY(-50%);
-  }
+  left: 50%;
+  transform: translateX(-50%);
 
   @media screen and (min-width: 768px) {
     height: 220px;
@@ -129,22 +125,19 @@
   position: relative;
 }
 
-.coffee::after {
+.coffee::before {
   content: ' ';
   position: absolute;
   top: -23%;
-  left: 6%;
+
   background-image: url('../images/coffee.png');
   height: 250px;
   width: 250px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-
-  @media screen and (max-width: 767px) {
-    left: 50%;
-    transform: translateY(-50%);
-  }
+  left: 50%;
+  transform: translateX(-50%);
 
   @media screen and (min-width: 768px) {
     height: 220px;
@@ -171,12 +164,10 @@
   position: relative;
 }
 
-.green::after {
+.green::before {
   content: ' ';
   position: absolute;
   top: -23%;
-  left: 6%;
-  // transform: translateY(-50%);
   width: 250px;
   height: 250px;
   background-repeat: no-repeat;
@@ -184,11 +175,8 @@
   background-size: contain;
   background-image: url('../images/milks.png');
   align-items: center;
-
-  @media screen and (max-width: 767px) {
-    left: 50%;
-    transform: translateY(-50%);
-  }
+  left: 50%;
+  transform: translateX(-50%);
 
   @media screen and (min-width: 768px) {
     height: 220px;
@@ -230,8 +218,15 @@
 }
 
 .products__items {
-  margin-top: 16px;
+  @media screen and (max-width: 767px) {
+    margin-top: 130px;
+  }
+  position: relative;
 }
+
+.products__items::before {
+}
+
 .products__text-h3 {
   font-family: $primary-font;
   font-weight: 700;
