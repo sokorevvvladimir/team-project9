@@ -1414,10 +1414,6 @@ summary {
   }
 }
 
-.products__items {
-  position: relative;
-}
-
 @media screen and (max-width: 767px) {
   .products__items {
     margin-top: 130px;
