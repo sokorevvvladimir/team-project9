@@ -67,12 +67,12 @@
 }
 
 .header__logo {
-  transition-duration: $animation-duration;
+  transition-duration: 500ms;
 }
 
 .header__logo:hover,
 .header__logo:focus {
-  transform: scale(1.2) rotate(1turn);
+  transform: rotateY(1turn);
 }
 
 .header__nav {
@@ -104,7 +104,7 @@
 .header__nav-link {
   color: $white-color;
   text-decoration: none;
-  transition: $animation-duration $cubic-bezier;
+  transition: 500ms $cubic-bezier;
 }
 
 .header__nav-link:hover,
@@ -119,9 +119,6 @@
 .header__menu-svg {
   display: inline-flex;
   transition: $animation-duration $cubic-bezier;
-  // @include respond-to(desktop) {
-  //   display: none;
-  // }
 }
 
 .header__menu-btn {
