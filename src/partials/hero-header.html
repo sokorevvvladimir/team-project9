@@ -43,11 +43,9 @@
           </button>
           <!-- конец кнопки мобильного меню -->
         </div>
-        <!-- <button type="button" class="type-one type-one--header">Buy now ></button> -->
-        <button data-modal-open type="button" class="type-one type-one--header">Buy now</button>
+        <button data1-modal-open type="button" class="type-one type-one--header">Buy now</button>
       </div>
     </div>
-    <!-- <include src="./partials/mobile-menu.html"></include> -->
     <!-- конец верхней строки -->
     <!-- тайтл героя + две кнопки-ссылки -->
     <div class="header__wrap-title">
@@ -85,14 +83,25 @@
     </div>
     <!-- конец 16 кафе и 24 тележки -->
     <!-- описание какие мы крутые -->
-    <p class="header__text-about">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aspernatur adipisci dignissimos
-      sit
-    </p>
+
     <div>
       <button type="button" class="header__about-btn">
         <img src="././images/header-arrow.png" class="header__about-img" alt="arrow right" />
       </button>
+      <p class="header__text-about">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aspernatur adipisci
+        dignissimos sit
+      </p>
+      <div class="header__text-about-wrap">
+        <p class="header__text-big">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ea nam eveniet consectetur
+          impedit amet similique doloremque nobis facilis eius. Maxime debitis ad quia rerum
+          pariatur blanditiis tempore voluptatibus officia! Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Reiciendis quasi quisquam sunt, voluptas esse aperiam? Asperiores,
+          deleniti libero commodi laboriosam eos, obcaecati, velit corrupti cum quo consectetur
+          autem minima reprehenderit.
+        </p>
+      </div>
     </div>
     <!-- конец какие мы крутые -->
     <!-- картинка героя -->
@@ -113,9 +122,81 @@
   </div>
 
   <!-- модалка -->
-  <div class="backdrop backdrop--is-hidden backdrop--layer" data-modal>
+  <div class="backdrop backdrop--is-hidden1 backdrop--layer" data1-modal>
     <div class="contacts-modal">
-      <button data-modal-close type="button" class="modal__btn-close">
+      <button data1-modal-close type="button" class="modal__btn-close">
+        <svg width="20" height="20">
+          <use href="./images/symbol-defs.svg#icon-close_40px"></use>
+        </svg>
+      </button>
+
+      <h3 class="modal__title">Make your choice</h3>
+      <!-- <p class="contacts-madal__text">Lorem ipsum dolor sit amet</p> -->
+
+      <form>
+        <div class="label">
+          <span>Choice our product</span>
+          <label for="contacts-name" class="contacts-label"></label>
+          <input
+            list="products-list"
+            type="text"
+            id="contacts-name"
+            class="contacts-input contacts__input--margin"
+            placeholder="Products"
+          />
+          <datalist id="products-list">
+            <option value="Ice Cream"></option>
+            <option value="Ice Coffee"></option>
+            <option value="Milkshakes"></option>
+          </datalist>
+        </div>
+        <span>Number of servings</span>
+        <div>
+          <label for="count" class="contacts-label"></label>
+          <input
+            type="number"
+            name="number"
+            min="0"
+            max="10"
+            id="count"
+            class="contacts-input contacts__input--margin"
+            placeholder="Number of servings"
+          />
+        </div>
+
+        <div class="label">
+          <label for="contacts-name" class="contacts-label"></label>
+          <input
+            type="text"
+            name="name"
+            id="contacts-name"
+            class="contacts-input contacts__input--margin"
+            placeholder="Your name"
+          />
+        </div>
+        <div>
+          <label for="tel" class="contacts-label"></label>
+
+          <input
+            type="tel"
+            name="tel"
+            id="tel"
+            class="contacts-input contacts__input--margin"
+            placeholder="Your phone"
+          />
+        </div>
+      </form>
+
+      <button type="button" class="modal__btn-submit">Bay !!!</button>
+    </div>
+  </div>
+  <!-- конец модалки -->
+</header>
+
+<!-- модалка mobile -->
+<!-- <div class="backdrop backdrop--is-hidden1 backdrop--layer" data1-modal>
+    <div class="contacts-modal">
+      <button data1-modal-close type="button" class="modal__btn-close">
         <svg width="20" height="20">
           <use href="./images/symbol-defs.svg#icon-close_40px"></use>
         </svg>
@@ -145,8 +226,7 @@
         </div>
       </form>
 
-      <button type="button" class="modal__btn-submit">Submit</button>
+      <button type="button" class="modal__btn-submit">Bay !!!</button>
     </div>
-  </div>
-  <!-- конец модалки -->
-</header>
+  </div> -->
+<!-- конец модалки -->
