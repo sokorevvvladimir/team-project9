@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   background-color: $header-background;
-  width: 100vw;
+  width: 100%;
   min-height: 320px;
   height: 502px;
   padding: 6px 20px 0 20px;
@@ -447,7 +447,6 @@
   line-height: 1.5;
   color: $white-color;
 
-
   @include respond-to(tablet) {
     display: block;
     width: 114px;
@@ -510,7 +509,7 @@
   font-size: 8px;
   line-height: 1.5;
   color: $white-color;
-  background-color: linear-gradient(rgba(212, 20, 67, .3), rgba(212, 20, 67, .3));
+  background-color: linear-gradient(rgba(212, 20, 67, 0.3), rgba(212, 20, 67, 0.3));
   opacity: 0;
   transition: 500ms $cubic-bezier;
   @include respond-to(tablet) {
@@ -534,7 +533,7 @@
 }
 
 .header__text-big {
-  background-image: linear-gradient(rgba(212, 20, 67, .3) rgba(212, 20, 67, .3));
+  background-image: linear-gradient(rgba(212, 20, 67, 0.3) rgba(212, 20, 67, 0.3));
 }
 
 .header__about-btn:hover ~ .header__text-about {
