@@ -2,6 +2,7 @@
   background: #fff5f6;
   padding-bottom: 97px;
   padding-top: 40px;
+
   @media screen and(min-width: 768px) {
     padding-top: 65px;
   }
@@ -53,6 +54,9 @@
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../images/advantage2@2x.png');
     }
+    @media screen and(min-width: 768px) {
+      margin-top: 0;
+    }
   }
 
   &:nth-child(3)::before {
@@ -61,6 +65,9 @@
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../images/advantage3@2x.png');
+    }
+    @media screen and(min-width: 768px) {
+      margin-top: 0;
     }
   }
 }
