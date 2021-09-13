@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" id="home">
   <div class="header__wrap">
     <!-- верхняя строка -->
     <div class="header__wrap-topline">
@@ -6,7 +6,7 @@
       <nav class="header__nav">
         <ul class="header__nav-list">
           <li class="header__nav-box">
-            <a href="#" class="header__nav-link header__nav-link--current">Home</a>
+            <a href="#home" class="header__nav-link header__nav-link--current">Home</a>
           </li>
           <li class="header__nav-box">
             <a href="#advantages" class="header__nav-link scrollto">About us</a>
@@ -15,7 +15,7 @@
             <a href="#how_its_made" class="header__nav-link scrollto">How it’s made?</a>
           </li>
           <li class="header__nav-box">
-            <a href="#product" class="header__nav-link scrollto">Our products</a>
+            <a href="#products" class="header__nav-link scrollto">Our products</a>
           </li>
           <li class="header__nav-box">
             <a href="#contacts" class="header__nav-link scrollto">Contact</a>
@@ -23,11 +23,11 @@
         </ul>
       </nav>
       <div class="header__wrap-topline header__wrap-topline--tablet">
-        <div>
+        <div class="clear">
           <!-- кнопка мобильного меню -->
           <button
             type="button"
-            class="header__menu-btn js-open-menu"
+            class="header__menu-btn js-open-menu clear"
             aria-expanded="false"
             aria-controls="mobile-menu"
           >
@@ -43,7 +43,7 @@
           </button>
           <!-- конец кнопки мобильного меню -->
         </div>
-        <button type="button" class="type-one type-one--header">Buy now ></button>
+        <button data1-modal-open type="button" class="type-one type-one--header">Buy now</button>
       </div>
     </div>
     <!-- конец верхней строки -->
@@ -83,14 +83,25 @@
     </div>
     <!-- конец 16 кафе и 24 тележки -->
     <!-- описание какие мы крутые -->
-    <p class="header__text-about">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aspernatur adipisci dignissimos
-      sit
-    </p>
+
     <div>
       <button type="button" class="header__about-btn">
         <img src="././images/header-arrow.png" class="header__about-img" alt="arrow right" />
       </button>
+      <p class="header__text-about">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aspernatur adipisci
+        dignissimos sit
+      </p>
+      <div class="header__text-about-wrap">
+        <p class="header__text-big">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ea nam eveniet consectetur
+          impedit amet similique doloremque nobis facilis eius. Maxime debitis ad quia rerum
+          pariatur blanditiis tempore voluptatibus officia! Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Reiciendis quasi quisquam sunt, voluptas esse aperiam? Asperiores,
+          deleniti libero commodi laboriosam eos, obcaecati, velit corrupti cum quo consectetur
+          autem minima reprehenderit.
+        </p>
+      </div>
     </div>
     <!-- конец какие мы крутые -->
     <!-- картинка героя -->
@@ -109,4 +120,113 @@
     </picture>
     <!-- конец картинки героя -->
   </div>
+
+  <!-- модалка -->
+  <div class="backdrop backdrop--is-hidden1 backdrop--layer" data1-modal>
+    <div class="contacts-modal">
+      <button data1-modal-close type="button" class="modal__btn-close">
+        <svg width="20" height="20">
+          <use href="./images/symbol-defs.svg#icon-close_40px"></use>
+        </svg>
+      </button>
+
+      <h3 class="modal__title">Make your choice</h3>
+      <!-- <p class="contacts-madal__text">Lorem ipsum dolor sit amet</p> -->
+
+      <form>
+        <div class="label">
+          <span>Choice our product</span>
+          <label for="contacts-name" class="contacts-label"></label>
+          <input
+            list="products-list"
+            type="text"
+            id="contacts-name"
+            class="contacts-input contacts__input--margin"
+            placeholder="Products"
+          />
+          <datalist id="products-list">
+            <option value="Ice Cream"></option>
+            <option value="Ice Coffee"></option>
+            <option value="Milkshakes"></option>
+          </datalist>
+        </div>
+        <span>Number of servings</span>
+        <div>
+          <label for="count" class="contacts-label"></label>
+          <input
+            type="number"
+            name="number"
+            min="0"
+            max="10"
+            id="count"
+            class="contacts-input contacts__input--margin"
+            placeholder="Number of servings"
+          />
+        </div>
+
+        <div class="label">
+          <label for="contacts-name" class="contacts-label"></label>
+          <input
+            type="text"
+            name="name"
+            id="contacts-name"
+            class="contacts-input contacts__input--margin"
+            placeholder="Your name"
+          />
+        </div>
+        <div>
+          <label for="tel" class="contacts-label"></label>
+
+          <input
+            type="tel"
+            name="tel"
+            id="tel"
+            class="contacts-input contacts__input--margin"
+            placeholder="Your phone"
+          />
+        </div>
+      </form>
+
+      <button type="button" class="modal__btn-submit">Bay !!!</button>
+    </div>
+  </div>
+  <!-- конец модалки -->
 </header>
+
+<!-- модалка mobile -->
+<!-- <div class="backdrop backdrop--is-hidden1 backdrop--layer" data1-modal>
+    <div class="contacts-modal">
+      <button data1-modal-close type="button" class="modal__btn-close">
+        <svg width="20" height="20">
+          <use href="./images/symbol-defs.svg#icon-close_40px"></use>
+        </svg>
+      </button>
+
+      <p class="contacts-madal__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, delectus distinctio. Et
+        optio similique officia doloremque totam quo officiis perferendis labore natus voluptas!
+        Nobis praesentium dolorem architecto, iste magni tenetur!
+      </p>
+
+      <form>
+        <div class="label">
+          <label for="contacts-name" class="contacts-label"></label>
+          <input
+            type="text"
+            name="name"
+            id="contacts-name"
+            class="contacts-input"
+            placeholder="Name"
+          />
+        </div>
+        <div>
+          <label for="tel" class="contacts-label"></label>
+
+          <input type="tel" name="tel" id="tel" class="contacts-input" placeholder="Phone" />
+        </div>
+      </form>
+
+      <button type="button" class="modal__btn-submit">Bay !!!</button>
+    </div>
+  </div> -->
+<!-- конец модалки -->

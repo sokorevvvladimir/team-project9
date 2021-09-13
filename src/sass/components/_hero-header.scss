@@ -1,3 +1,8 @@
+.clear {
+  margin: 0;
+  padding: 0;
+}
+
 .header {
   margin: 0;
   padding: 0;
@@ -62,12 +67,12 @@
 }
 
 .header__logo {
-  transition-duration: $animation-duration;
+  transition-duration: 500ms;
 }
 
 .header__logo:hover,
 .header__logo:focus {
-  transform: scale(1.2) rotate(1turn);
+  transform: rotateY(1turn);
 }
 
 .header__nav {
@@ -99,7 +104,7 @@
 .header__nav-link {
   color: $white-color;
   text-decoration: none;
-  transition: $animation-duration $cubic-bezier;
+  transition: 500ms $cubic-bezier;
 }
 
 .header__nav-link:hover,
@@ -114,9 +119,6 @@
 .header__menu-svg {
   display: inline-flex;
   transition: $animation-duration $cubic-bezier;
-  // @include respond-to(desktop) {
-  //   display: none;
-  // }
 }
 
 .header__menu-btn {
@@ -143,7 +145,7 @@
   left: 97px;
   // ----------------
   animation-name: Appearance;
-  animation-duration: 3000ms;
+  animation-duration: 1500ms;
   animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
   // ---------------
   @include respond-to(tablet) {
@@ -254,6 +256,11 @@
   }
 }
 
+.backdrop.backdrop--is-hidden1 {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .type-one--header {
   display: none;
   @include respond-to(tablet) {
@@ -292,13 +299,13 @@
   @include respond-to(tablet) {
     display: block;
     position: absolute;
-    left: 649px;
+    left: 645px;
     --left-range: 649px;
-    width: 53px;
+    width: 55px;
     height: 43px;
     z-index: 30;
     animation-name: right-to-left;
-    animation-duration: 2000ms;
+    animation-duration: 1000ms;
     animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
   }
   @include respond-to(desktop) {
@@ -307,7 +314,7 @@
     top: 118px;
     left: 1045px;
     --left-range: 1045px;
-    width: 92px;
+    width: 95px;
     height: 76px;
     z-index: 30;
   }
@@ -379,7 +386,7 @@
 .header__16-23-text {
   position: absolute;
   bottom: 0px;
-  right: 10px;
+  right: 12px;
   z-index: 35;
   font-family: $primary-font;
   font-style: normal;
@@ -388,6 +395,7 @@
   line-height: 1.25;
   color: $white-color;
   @include respond-to(desktop) {
+    right: 19px;
     font-size: 14px;
     line-height: 1.28;
   }
@@ -489,4 +497,68 @@
     width: 26px;
     height: 26px;
   }
+}
+
+.header__text-about-wrap {
+  display: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 1.5;
+  color: $white-color;
+  opacity: 0;
+  transition: 500ms $cubic-bezier;
+  @include respond-to(tablet) {
+    display: none;
+    z-index: 54;
+    top: 244px;
+    left: 120px;
+    width: 410px;
+    height: 197px;
+  }
+  @include respond-to(desktop) {
+    display: none;
+    z-index: 54;
+    width: 540px;
+    height: 197px;
+    top: 410px;
+    left: 249px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+.header__about-btn:hover ~ .header__text-about {
+  display: none;
+}
+
+.header__about-btn:hover ~ .header__text-about-wrap {
+  display: block;
+  opacity: 1;
+}
+
+// ----------------------------------------------
+.backdrop--layer {
+  z-index: 51;
+}
+
+.modal__title {
+  text-align: center;
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1.13;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $accent-color;
+  margin: 0 0 10px 0;
+}
+
+.contacts__input--margin {
+  margin: 0 0 10px 0;
 }
