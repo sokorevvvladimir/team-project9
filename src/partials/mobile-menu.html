@@ -9,7 +9,10 @@
             </svg>
         </button>
 
-        <button type="button" class="type-one-mobile">Buy now ></button>
+        <!-- закоментил старую кнопку прописал кнопку для модалки -->
+        <!-- <button type="button" class="type-one-mobile">Buy now ></button> -->
+        <button data2-modal-open type="button" class="type-one-mobile">Buy now ></button>
+        <!-- ------------------------------------------------------ -->
 
     </div>
 
@@ -41,3 +44,75 @@
         </li>
     </ul>
 </div>
+
+<!-- Дальше модальное меню -->
+  <!-- модалка -->
+  <div class="backdrop backdrop--is-hidden2 backdrop--layer" data2-modal>
+    <div class="contacts-modal">
+      <button data2-modal-close type="button" class="modal__btn-close">
+        <svg width="20" height="20">
+          <use href="./images/symbol-defs.svg#icon-close_40px"></use>
+        </svg>
+      </button>
+
+      <h3 class="modal__title">Make your choice</h3>
+      <!-- <p class="contacts-madal__text">Lorem ipsum dolor sit amet</p> -->
+
+      <form>
+        <div class="label">
+          <span>Choice our product</span>
+          <label for="contacts-name" class="contacts-label"></label>
+          <input
+            list="products-list"
+            type="text"
+            id="contacts-name"
+            class="contacts-input contacts__input--margin"
+            placeholder="Products"
+          />
+          <datalist id="products-list">
+            <option value="Ice Cream"></option>
+            <option value="Ice Coffee"></option>
+            <option value="Milkshakes"></option>
+          </datalist>
+        </div>
+        <span>Number of servings</span>
+        <div>
+          <label for="count" class="contacts-label"></label>
+          <input
+            type="number"
+            name="number"
+            min="0"
+            max="10"
+            id="count"
+            class="contacts-input contacts__input--margin"
+            placeholder="Number of servings"
+          />
+        </div>
+
+        <div class="label">
+          <label for="contacts-name" class="contacts-label"></label>
+          <input
+            type="text"
+            name="name"
+            id="contacts-name"
+            class="contacts-input contacts__input--margin"
+            placeholder="Your name"
+          />
+        </div>
+        <div>
+          <label for="tel" class="contacts-label"></label>
+
+          <input
+            type="tel"
+            name="tel"
+            id="tel"
+            class="contacts-input contacts__input--margin"
+            placeholder="Your phone"
+          />
+        </div>
+      </form>
+
+      <button type="button" class="modal__btn-submit">Bay !!!</button>
+    </div>
+  </div>
+  <!-- конец модалки -->

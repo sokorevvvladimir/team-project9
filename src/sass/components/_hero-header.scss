@@ -67,12 +67,12 @@
 }
 
 .header__logo {
-  transition-duration: $animation-duration;
+  transition-duration: 500ms;
 }
 
 .header__logo:hover,
 .header__logo:focus {
-  transform: scale(1.2) rotate(1turn);
+  transform: rotateY(1turn);
 }
 
 .header__nav {
@@ -104,7 +104,7 @@
 .header__nav-link {
   color: $white-color;
   text-decoration: none;
-  transition: $animation-duration $cubic-bezier;
+  transition: 500ms $cubic-bezier;
 }
 
 .header__nav-link:hover,
@@ -119,9 +119,6 @@
 .header__menu-svg {
   display: inline-flex;
   transition: $animation-duration $cubic-bezier;
-  // @include respond-to(desktop) {
-  //   display: none;
-  // }
 }
 
 .header__menu-btn {
@@ -502,6 +499,66 @@
   }
 }
 
+.header__text-about-wrap {
+  display: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 1.5;
+  color: $white-color;
+  opacity: 0;
+  transition: 500ms $cubic-bezier;
+  @include respond-to(tablet) {
+    display: none;
+    z-index: 54;
+    top: 244px;
+    left: 120px;
+    width: 410px;
+    height: 197px;
+  }
+  @include respond-to(desktop) {
+    display: none;
+    z-index: 54;
+    width: 540px;
+    height: 197px;
+    top: 410px;
+    left: 249px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+.header__about-btn:hover ~ .header__text-about {
+  display: none;
+}
+
+.header__about-btn:hover ~ .header__text-about-wrap {
+  display: block;
+  opacity: 1;
+}
+
+// ----------------------------------------------
 .backdrop--layer {
-  z-index: 55;
+  z-index: 51;
+}
+
+.modal__title {
+  text-align: center;
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1.13;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $accent-color;
+  margin: 0 0 10px 0;
+}
+
+.contacts__input--margin {
+  margin: 0 0 10px 0;
 }
