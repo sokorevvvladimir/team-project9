@@ -14,13 +14,27 @@
                 <p class="about__description">
                     Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.
                 </p>
+                <!--здесь ДИВ чтобы отодвинуть кнопку на необходимый отступ марджином-->
                 <div class="about__description-text">
                     Aliquam erat volutpat. Aenean accumsan.
                 </div> 
-                <button type="button" class="btn-read-more">
+                <button data6-modal-open type="button" class="btn-read-more">
                     Read more >
                 </button>
             </div>
         </div>   
     </div>
-</section>  
+</section> 
+<div class="backdrop6 backdrop--is-hidden6 backdrop6--layer">
+    <div data6-modal class="about-modal">
+
+        <button data6-modal-close type="button" class="about-modal__btn-close">
+            <svg width="20" height="20">
+                <use href="./images/symbol-defs.svg#icon-close_40px"></use>
+            </svg>
+        </button>
+        <p class="about-modal__text">
+             Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla. Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.Aliquam erat volutpat. Aenean accumsan.
+        </p>
+    </div>
+</div> 
