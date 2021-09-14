@@ -16,13 +16,12 @@
     background-size: 1282px 534px;
     background-position: bottom;
   }
-   
 
   // .about__label
 
   &__label {
     font-family: $secondary-font;
-    font-size: 18px;  
+    font-size: 18px;
     line-height: 1.17;
 
     text-align: center;
@@ -40,7 +39,7 @@
   // .about__title
 
   &__title {
-    padding-top: 15px;
+    margin-top: 15px;
     font-family: $secondary-font;
     font-size: 34px;
     line-height: 1.15;
@@ -79,9 +78,7 @@
       min-width: 516px;
       height: 516px;
       padding-top: 50px;
-      
     }
-    
   }
   // .about__thumb
 
@@ -93,7 +90,6 @@
     color: $primary-text-color;
     padding-top: 46px;
     padding-left: 50px;
-    
 
     align-content: center;
 
@@ -104,18 +100,18 @@
       padding-left: 17px;
       padding-right: 36px;
     }
-     @media screen and(min-width: 1280px) {
-       font-size: 16px;
-       line-height: 1.8;
-       padding-left: 74px;
-       padding-right: 117px;
-     }
+    @media screen and(min-width: 1280px) {
+      font-size: 16px;
+      line-height: 1.8;
+      padding-left: 74px;
+      padding-right: 117px;
+    }
   }
 
   // .about__text
 
   &__text {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
     color: $black-color;
   }
 
@@ -123,14 +119,13 @@
 
   &__description {
     white-space: normal;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
   }
 
   //.about__description-text
 
   &__description-text {
-    
-    margin-bottom: 17px;  
+    margin-bottom: 17px;
     @media screen and(min-width: 768px) {
       margin-bottom: 56px;
     }
@@ -139,7 +134,7 @@
     }
   }
 
-  .btn-read-more:hover{
+  .btn-read-more:hover {
     background-color: $button-white-hov-col;
   }
 }
@@ -157,7 +152,7 @@
   overflow-y: scroll;
   transform: translate(-50% -50%);
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
-  visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop--is-hidden6 {
@@ -166,14 +161,13 @@
 }
 
 .backdrop6--layer {
-  z-index: 55
+  z-index: 55;
 }
 
 .about-modal {
   min-width: 246px;
   width: 80vw;
-  height: 50vh;
-  background-color: rgba(246, 198, 203, 1); 
+  background-color: rgba(246, 198, 203, 1);
   border-radius: 24px;
   position: absolute;
   top: 50%;
@@ -185,29 +179,26 @@
     background-image: url(..//images/about-milk@2x.png);
     background-repeat: no-repeat;
     background-size: contain;
-    
-    
   }
-  
 
   // .about-modal__btn-close
 
   &__btn-close {
-  cursor: pointer;
-  font-size: 16px;
-  text-align: center;
-  background-color: $menu-background;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    background-color: $menu-background;
 
-  border: none;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 3%;
-  right: 5%;
-  border-radius: 50%;
-  padding: 0;
-  fill: $white-color;
-  transition: background-color $animation-duration $cubic-bezier;
+    border: none;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    border-radius: 50%;
+    padding: 0;
+    fill: $white-color;
+    transition: background-color $animation-duration $cubic-bezier;
   }
 
   // .about-modal__text
@@ -227,9 +218,8 @@
       padding: 100px;
     }
     @media screen and(min-width: 1280px) {
-      font-size: 22px; 
+      font-size: 22px;
       padding: 100px;
     }
   }
 }
-
