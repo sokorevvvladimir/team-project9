@@ -2,9 +2,7 @@
   <div class="header__wrap">
     <!-- верхняя строка -->
     <div class="header__wrap-topline">
-      <a href="./index.html">
-        <img class="header__logo" src="././images/logo.png" alt="Logo IceCream" />
-      </a>
+      <img class="header__logo" src="././images/logo.png" alt="Logo IceCream" />
       <nav class="header__nav">
         <ul class="header__nav-list">
           <li class="header__nav-box">
@@ -56,12 +54,20 @@
         <p>made with</p>
         <p class="header__title--accent">passion</p>
       </h1>
-      <a href="#products" class="type-two-red type-two-red--header scrollto">
+      <button
+        onclick="document.location='#products'"
+        type="button"
+        class="type-two-red type-two-red--header scrollto"
+      >
         Products
-      </a>
-      <a href="#how_its_made" class="type-two-white type-two-white--header scrollto">
+      </button>
+      <button
+        onclick="document.location='#how_its_made'"
+        type="button"
+        class="type-two-white type-two-white--header scrollto"
+      >
         How it's made?
-      </a>
+      </button>
     </div>
     <!-- конец тайтла героя + плюс две кнопки-ссылки -->
     <!-- 16 кафе и 24 тележки -->
@@ -129,7 +135,7 @@
 
       <form>
         <div class="label">
-          <span>Choose our product</span>
+          <span>Choice our product</span>
           <label for="contacts-name" class="contacts-label"></label>
           <input
             list="products-list"
