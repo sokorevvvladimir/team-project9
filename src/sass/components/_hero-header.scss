@@ -239,6 +239,10 @@
   }
 }
 
+.header__title--block {
+  display: block;
+}
+
 .header__title--accent {
   font-family: $secondary-font;
   font-weight: normal;
@@ -347,20 +351,43 @@
   }
 }
 
-.header__16-23-ellipse {
+.header__16-23::after {
+  content: ' ';
   position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 25;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
   background-color: $white-color;
-  @include respond-to(desktop) {
-    width: 30px;
+  border-radius: 50%;
+  z-index: -1;
+
+  @media screen and (min-width: 768px) {
+    top: 0;
+    right: 2px;
+    height: 16px;
+    width: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: 0;
+    right: 0;
+    z-index: -1;
     height: 30px;
+    width: 30px;
   }
 }
+
+// .header__16-23-ellipse {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   z-index: 25;
+//   width: 16px;
+//   height: 16px;
+//   border-radius: 50%;
+//   background-color: $white-color;
+//   @include respond-to(desktop) {
+//     width: 30px;
+//     height: 30px;
+//   }
+// }
 
 .header__16-23-number {
   display: block;
@@ -562,6 +589,13 @@
 }
 
 // --------------------------
+
+.modal__chois {
+  font-family: $primary-font;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
 .contacts-form1 {
   position: relative;
   margin-bottom: 20px;
@@ -615,5 +649,33 @@
     width: 370px;
     height: 35px;
     font-size: 16px;
+  }
+}
+
+.modal__btn-submit1 {
+  font-family: $primary-font;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  background-color: $menu-background;
+  color: $white-color;
+  border: none;
+  padding: 10px 25px;
+  // width: 70px;
+  // height: 25px;
+  position: absolute;
+  bottom: 10%;
+  border-radius: 4px;
+  // padding: 0;
+  outline: none;
+  transition: background-color $animation-duration $cubic-bezier;
+
+  &:focus {
+    background-color: $button-location-hov-col;
+  }
+
+  @media screen and(min-width: 768px) {
+    padding: 10px 20px;
+    font-size: 18px;
   }
 }
