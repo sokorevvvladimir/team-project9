@@ -2,7 +2,6 @@
   <div class="header__wrap">
     <!-- верхняя строка -->
     <div class="header__wrap-topline">
-      <!-- <img class="header__logo" src="././images/logo.png" alt="Logo IceCream" /> -->
       <a href="./index.html">
         <img class="header__logo" src="././images/logo.png" alt="Logo IceCream" />
       </a>
@@ -57,23 +56,9 @@
         <p>made with</p>
         <p class="header__title--accent">passion</p>
       </h1>
-      <!-- <button
-        onclick="document.location='#products'"
-        type="button"
-        class="type-two-red type-two-red--header scrollto"
-      > -->
-      <a href="#products" class="type-two-red type-two-red--header scrollto">
-        Products
-        <!-- </button>
-      <button
-        onclick="document.location='#how_its_made'"
-        type="button"
-        class="type-two-white type-two-white--header scrollto"
-      > -->
-      </a>
+      <a href="#products" class="type-two-red type-two-red--header scrollto"> Products </a>
       <a href="#how_its_made" class="type-two-white type-two-white--header scrollto">
         How it's made?
-        <!-- </button> -->
       </a>
     </div>
     <!-- конец тайтла героя + плюс две кнопки-ссылки -->
@@ -138,10 +123,9 @@
       </button>
 
       <h3 class="modal__title">Make your choice</h3>
-      <!-- <p class="contacts-madal__text">Lorem ipsum dolor sit amet</p> -->
 
       <form>
-        <div class="label">
+        <div class="contacts-form1">
           <span>Choice our product</span>
           <label for="contacts-name" class="contacts-label"></label>
           <input
@@ -157,40 +141,34 @@
             <option value="Milkshakes"></option>
           </datalist>
         </div>
-        <span>Number of servings</span>
-        <div>
-          <label for="count" class="contacts-label"></label>
+
+        <div class="contacts-form1">
           <input
             type="number"
-            name="number"
+            name="namber"
             min="0"
             max="10"
             id="count"
-            class="contacts-input contacts__input--margin"
-            placeholder="Number of servings"
+            class="contacts-input1"
+            placeholder=" "
           />
+          <label for="count" class="contacts-label1">How many servings</label>
         </div>
 
-        <div class="label">
-          <label for="contacts-name" class="contacts-label"></label>
+        <div class="contacts-form1">
           <input
             type="text"
             name="name"
             id="contacts-name"
-            class="contacts-input contacts__input--margin"
-            placeholder="Your name"
+            class="contacts-input1"
+            placeholder=" "
           />
+          <label for="contacts-name" class="contacts-label1">Name</label>
         </div>
-        <div>
-          <label for="tel" class="contacts-label"></label>
 
-          <input
-            type="tel"
-            name="tel"
-            id="tel"
-            class="contacts-input contacts__input--margin"
-            placeholder="Your phone"
-          />
+        <div class="contacts-form--no-margin">
+          <input type="tel" name="tel" id="tel" class="contacts-input1" placeholder=" " />
+          <label for="tel" class="contacts-label1">Phone</label>
         </div>
       </form>
 
@@ -199,41 +177,3 @@
   </div>
   <!-- конец модалки -->
 </header>
-
-<!-- модалка mobile -->
-<!-- <div class="backdrop backdrop--is-hidden1 backdrop--layer" data1-modal>
-    <div class="contacts-modal">
-      <button data1-modal-close type="button" class="modal__btn-close">
-        <svg width="20" height="20">
-          <use href="./images/symbol-defs.svg#icon-close_40px"></use>
-        </svg>
-      </button>
-
-      <p class="contacts-madal__text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, delectus distinctio. Et
-        optio similique officia doloremque totam quo officiis perferendis labore natus voluptas!
-        Nobis praesentium dolorem architecto, iste magni tenetur!
-      </p>
-
-      <form>
-        <div class="label">
-          <label for="contacts-name" class="contacts-label"></label>
-          <input
-            type="text"
-            name="name"
-            id="contacts-name"
-            class="contacts-input"
-            placeholder="Name"
-          />
-        </div>
-        <div>
-          <label for="tel" class="contacts-label"></label>
-
-          <input type="tel" name="tel" id="tel" class="contacts-input" placeholder="Phone" />
-        </div>
-      </form>
-
-      <button type="button" class="modal__btn-submit">Bay !!!</button>
-    </div>
-  </div> -->
-<!-- конец модалки -->
