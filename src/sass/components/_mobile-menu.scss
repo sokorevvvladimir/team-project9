@@ -47,8 +47,7 @@
   align-items: center;
   justify-content: center;
   top: 23px;
-  right: 0;
-  margin-right: 28px;
+  right: 28px;
   width: 40px;
   height: 40px;
   padding: 0;
@@ -61,7 +60,7 @@
   transition: background-color 250ms $cubic-bezier;
 
   @media screen and (min-width: 768px) {
-    margin-right: 34px;
+    right: 34px;
   }
   &:hover,
   &:focus,
@@ -128,24 +127,6 @@
 
 .backdrop--layer {
   z-index: 55;
-}
-
-.modal__title {
-  text-align: center;
-  font-family: $secondary-font;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 1.13;
-  text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: $accent-color;
-  margin: 0 0 10px 0;
-}
-
-.contacts__input--margin {
-  margin: 0 0 10px 0;
 }
 
 .backdrop.backdrop--is-hidden2 {

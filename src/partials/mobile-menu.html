@@ -3,118 +3,94 @@
 <div class="mobile-menu js-menu-container" id="mobile-menu">
   <div class="mobile-menu__content">
     <div class="mobile-menu__container">
-        
-        <button class="mobile-close js-close-menu">
-            <svg class="mobile-close__icon" width="16" height="16">
-                <use href="../src/images/symbol-defs.svg#mobile-menu-close-icon"></use>
-            </svg>
-        </button>
+      <button class="mobile-close js-close-menu">
+        <svg class="mobile-close__icon" width="16" height="16">
+          <use href="../src/images/symbol-defs.svg#mobile-menu-close-icon"></use>
+        </svg>
+      </button>
 
-        <!-- закоментил старую кнопку прописал кнопку для модалки -->
-        <!-- <button type="button" class="type-one-mobile">Buy now ></button> -->
-        <button data2-modal-open type="button" class="type-one-mobile">Buy now ></button>
-        <!-- ------------------------------------------------------ -->
-
+      <!-- закоментил старую кнопку прописал кнопку для модалки -->
+      <!-- <button type="button" class="type-one-mobile">Buy now ></button> -->
+      <button data2-modal-open type="button" class="type-one-mobile">Buy now ></button>
+      <!-- ------------------------------------------------------ -->
     </div>
 
     <ul class="nav-list">
-        <li class="nav-list__item">
-            <a href="#home" class="nav-list__link scrollto js-close-menu">
-                Home
-            </a>
-        </li>
-        <li class="nav-list__item">
-            <a href="#advantages" class="nav-list__link scrollto js-close-menu">
-                About us
-            </a>
-        </li>
-        <li class="nav-list__item">
-            <a href="#how_its_made" class="nav-list__link scrollto js-close-menu">
-                How it's made?
-            </a>
-        </li>
-        <li class="nav-list__item">
-            <a href="#products" class="nav-list__link scrollto js-close-menu">
-                Our products
-            </a>
-        </li>
-        <li class="nav-list__item">
-            <a href="#contacts" class="nav-list__link scrollto js-close-menu">
-                Contacts
-            </a>
-        </li>
+      <li class="nav-list__item">
+        <a href="#home" class="nav-list__link scrollto js-close-menu"> Home </a>
+      </li>
+      <li class="nav-list__item">
+        <a href="#advantages" class="nav-list__link scrollto js-close-menu"> About us </a>
+      </li>
+      <li class="nav-list__item">
+        <a href="#how_its_made" class="nav-list__link scrollto js-close-menu"> How it's made? </a>
+      </li>
+      <li class="nav-list__item">
+        <a href="#products" class="nav-list__link scrollto js-close-menu"> Our products </a>
+      </li>
+      <li class="nav-list__item">
+        <a href="#contacts" class="nav-list__link scrollto js-close-menu"> Contacts </a>
+      </li>
     </ul>
   </div>
 </div>
 
 <!-- Дальше модальное меню -->
-  <!-- модалка -->
-  <div class="backdrop backdrop--is-hidden2 backdrop--layer" data2-modal>
-    <div class="contacts-modal">
-      <button data2-modal-close type="button" class="modal__btn-close">
-        <svg width="20" height="20">
-          <use href="./images/symbol-defs.svg#icon-close_40px"></use>
-        </svg>
-      </button>
+<!-- модалка -->
+<div class="backdrop backdrop--is-hidden2 backdrop--layer" data2-modal>
+  <div class="contacts-modal">
+    <button data2-modal-close type="button" class="modal__btn-close">
+      <svg width="20" height="20">
+        <use href="./images/symbol-defs.svg#icon-close_40px"></use>
+      </svg>
+    </button>
 
-      <h3 class="modal__title">Make your choice</h3>
-      <!-- <p class="contacts-madal__text">Lorem ipsum dolor sit amet</p> -->
+    <h3 class="modal__title">Make your choice</h3>
+    <!-- <p class="contacts-madal__text">Lorem ipsum dolor sit amet</p> -->
 
-      <form>
-        <div class="label">
-          <span>Choose our product</span>
-          <label for="contacts-name" class="contacts-label"></label>
-          <input
-            list="products-list"
-            type="text"
-            id="contacts-name"
-            class="contacts-input contacts__input--margin"
-            placeholder="Products"
-          />
-          <datalist id="products-list">
-            <option value="Ice Cream"></option>
-            <option value="Ice Coffee"></option>
-            <option value="Milkshakes"></option>
-          </datalist>
-        </div>
-        <span>Number of servings</span>
-        <div>
-          <label for="count" class="contacts-label"></label>
-          <input
-            type="number"
-            name="number"
-            min="0"
-            max="10"
-            id="count"
-            class="contacts-input contacts__input--margin"
-            placeholder="Number of servings"
-          />
-        </div>
+    <form>
+      <div class="contacts-form1">
+        <span class="modal__chois">Choice our product</span>
+        <label for="contacts-name" class="contacts-label"></label>
+        <input
+          list="products-list"
+          type="text"
+          id="contacts-name"
+          class="contacts-input contacts__input--margin"
+          placeholder="Products"
+        />
+        <datalist id="products-list">
+          <option value="Ice Cream"></option>
+          <option value="Ice Coffee"></option>
+          <option value="Milkshakes"></option>
+        </datalist>
+      </div>
 
-        <div class="label">
-          <label for="contacts-name" class="contacts-label"></label>
-          <input
-            type="text"
-            name="name"
-            id="contacts-name"
-            class="contacts-input contacts__input--margin"
-            placeholder="Your name"
-          />
-        </div>
-        <div>
-          <label for="tel" class="contacts-label"></label>
+      <div class="contacts-form1">
+        <input
+          type="number"
+          name="namber"
+          min="0"
+          max="10"
+          id="count"
+          class="contacts-input1"
+          placeholder=" "
+        />
+        <label for="count" class="contacts-label1">How many servings</label>
+      </div>
 
-          <input
-            type="tel"
-            name="tel"
-            id="tel"
-            class="contacts-input contacts__input--margin"
-            placeholder="Your phone"
-          />
-        </div>
-      </form>
+      <div class="contacts-form1">
+        <input type="text" name="name" id="contacts-name" class="contacts-input1" placeholder=" " />
+        <label for="contacts-name" class="contacts-label1">Name</label>
+      </div>
 
-      <button type="button" class="modal__btn-submit">Buy !!!</button>
-    </div>
+      <div class="contacts-form--no-margin">
+        <input type="tel" name="tel" id="tel" class="contacts-input1" placeholder=" " />
+        <label for="tel" class="contacts-label1">Phone</label>
+      </div>
+    </form>
+
+    <button type="button" class="modal__btn-submit1">Buy !!!</button>
   </div>
-  <!-- конец модалки -->
+</div>
+<!-- конец модалки -->

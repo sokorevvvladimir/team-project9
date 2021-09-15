@@ -239,6 +239,10 @@
   }
 }
 
+.header__title--block {
+  display: block;
+}
+
 .header__title--accent {
   font-family: $secondary-font;
   font-weight: normal;
@@ -347,20 +351,43 @@
   }
 }
 
-.header__16-23-ellipse {
+.header__16-23::after {
+  content: ' ';
   position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 25;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
   background-color: $white-color;
-  @include respond-to(desktop) {
-    width: 30px;
+  border-radius: 50%;
+  z-index: -1;
+
+  @media screen and (min-width: 768px) {
+    top: 0;
+    right: 2px;
+    height: 16px;
+    width: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: 0;
+    right: 0;
+    z-index: -1;
     height: 30px;
+    width: 30px;
   }
 }
+
+// .header__16-23-ellipse {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   z-index: 25;
+//   width: 16px;
+//   height: 16px;
+//   border-radius: 50%;
+//   background-color: $white-color;
+//   @include respond-to(desktop) {
+//     width: 30px;
+//     height: 30px;
+//   }
+// }
 
 .header__16-23-number {
   display: block;
@@ -510,7 +537,7 @@
   line-height: 1.5;
   color: $white-color;
   background-image: linear-gradient(rgba(212, 20, 67, 0.3), rgba(212, 20, 67, 0.3));
-  border-radius:  5px;
+  border-radius: 5px;
   opacity: 0;
   transition: 500ms $cubic-bezier;
   @include respond-to(tablet) {
@@ -532,10 +559,6 @@
     line-height: 1.4;
   }
 }
-
-// .header__text-big {
-
-// }
 
 .header__about-btn:hover ~ .header__text-about {
   display: none;
@@ -565,6 +588,94 @@
   margin: 0 0 10px 0;
 }
 
-.contacts__input--margin {
-  margin: 0 0 10px 0;
+// --------------------------
+
+.modal__chois {
+  font-family: $primary-font;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.contacts-form1 {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.contacts-form--no-margin {
+  position: relative;
+}
+
+.contacts-label1 {
+  font-family: $primary-font;
+  color: rgba(117, 117, 117, 0.8);
+  font-size: 12px;
+  line-height: 1.3;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: transform $animation-duration $cubic-bezier, color $animation-duration $cubic-bezier;
+
+  @media screen and(min-width:768px) {
+    font-size: 16px;
+  }
+}
+.contacts-input1:focus ~ .contacts-label1,
+.contacts-input1:not(:placeholder-shown) + .contacts-label1 {
+  transform: translate(-10px, -27px);
+  color: $black-color;
+
+  @media screen and(min-width:768px) {
+    transform: translate(-10px, -35px);
+  }
+}
+
+.contacts-input1 {
+  padding-left: 5px;
+  font-family: $primary-font;
+  font-size: 12px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  height: 25px;
+  width: 230px;
+  transition: border $animation-duration $cubic-bezier;
+
+  &:focus {
+    border: 1px solid $menu-background;
+  }
+
+  @media screen and(min-width:768px) {
+    width: 370px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+
+.modal__btn-submit1 {
+  font-family: $primary-font;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  background-color: $menu-background;
+  color: $white-color;
+  border: none;
+  padding: 10px 25px;
+  // width: 70px;
+  // height: 25px;
+  position: absolute;
+  bottom: 10%;
+  border-radius: 4px;
+  // padding: 0;
+  outline: none;
+  transition: background-color $animation-duration $cubic-bezier;
+
+  &:focus {
+    background-color: $button-location-hov-col;
+  }
+
+  @media screen and(min-width: 768px) {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
 }
